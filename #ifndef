@@ -1,0 +1,17 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+
+#ifndef _WMUSERH      //define a keyword ,not used before
+    cout << "Hello world!" << endl;
+#endif // _WMUSERH   //the closure of this pre process scope 
+
+#ifdef _WMUSERH     //Check if the keyword still exists , following line wont' execute ,there is no _WMUSERH defined 
+    cout << "Hello world! X2 " << endl;
+#endif // _WMUSERH
+
+    return 0;
+}
